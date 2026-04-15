@@ -1,0 +1,288 @@
+.od-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #111;
+}
+
+.od-main {
+  flex: 1;
+  max-width: 50rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 5.5rem 2.5rem 3rem;
+  box-sizing: border-box;
+}
+
+.od-loading,
+.od-error {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 3rem 0;
+}
+
+.od-error {
+  color: #b91c1c;
+}
+
+.od-page-title {
+  margin: 0 0 2rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+/* ===== Header ===== */
+.od-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 0.0625rem solid #eee;
+}
+
+.od-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.od-date {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+/* ===== Status badge ===== */
+.od-status-badge {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  white-space: nowrap;
+}
+
+.od-status--pending { background: #fef3c7; color: #92400e; }
+.od-status--paid { background: #dbeafe; color: #1e40af; }
+.od-status--preparing { background: #e0e7ff; color: #3730a3; }
+.od-status--shipped { background: #d1fae5; color: #065f46; }
+.od-status--delivered { background: #f0fdf4; color: #166534; }
+.od-status--cancelled { background: #fee2e2; color: #991b1b; }
+
+/* ===== Sections ===== */
+.od-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 0.0625rem solid #eee;
+}
+
+.od-section:last-of-type {
+  border-bottom: none;
+}
+
+.od-section-title {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+/* ===== Items ===== */
+.od-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.od-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 0.0625rem solid #f3f4f6;
+}
+
+.od-item:last-child {
+  border-bottom: none;
+}
+
+.od-item-img {
+  width: 4.5rem;
+  height: 4.5rem;
+  flex-shrink: 0;
+  background: #f4f4f4;
+  overflow: hidden;
+}
+
+.od-item-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.od-item-img--empty {
+  width: 100%;
+  height: 100%;
+  background: #eee;
+}
+
+.od-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.od-item-name {
+  margin: 0 0 0.15rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.od-item-name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.od-item-name a:hover {
+  text-decoration: underline;
+}
+
+.od-item-meta {
+  margin: 0 0 0.1rem;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.od-item-qty {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+.od-item-price {
+  flex-shrink: 0;
+  font-size: 0.92rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* ===== DL (key-value) ===== */
+.od-dl {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 0.5rem 1rem;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.od-dl dt {
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.od-dl dd {
+  margin: 0;
+  color: #111;
+}
+
+/* ===== Summary ===== */
+.od-summary {
+  max-width: 22rem;
+  margin-left: auto;
+}
+
+.od-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  margin-bottom: 0.5rem;
+}
+
+.od-summary-divider {
+  border-top: 0.0625rem solid #eee;
+  margin: 0.65rem 0;
+}
+
+.od-summary-grand {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+/* ===== Cancel reason ===== */
+.od-cancel-reason {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #b91c1c;
+}
+
+/* ===== Actions ===== */
+.od-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.od-cancel-btn {
+  padding: 0.65rem 1.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-family: inherit;
+  border: 1px solid #fca5a5;
+  background: #fff;
+  color: #b91c1c;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.od-cancel-btn:hover:not(:disabled) {
+  background: #fef2f2;
+  border-color: #b91c1c;
+}
+
+.od-cancel-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.od-list-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.65rem 1.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  background: #111;
+  color: #fff;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.od-list-btn:hover {
+  background: #333;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 36rem) {
+  .od-main {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .od-dl {
+    grid-template-columns: 1fr;
+  }
+
+  .od-dl dt {
+    margin-top: 0.25rem;
+  }
+
+  .od-summary {
+    max-width: 100%;
+    margin-left: 0;
+  }
+}

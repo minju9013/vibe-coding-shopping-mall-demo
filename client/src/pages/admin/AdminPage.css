@@ -1,0 +1,487 @@
+.admin-page {
+  min-height: 100vh;
+  background: #f5f6f8;
+  color: #1a1a1a;
+  font-family: inherit;
+}
+
+.admin-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  height: 56px;
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.admin-logo {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+
+.admin-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: #316b00;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+}
+
+.admin-back-btn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #333;
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.admin-back-btn:hover {
+  border-color: #bbb;
+  background: #fafafa;
+}
+
+.admin-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.admin-header {
+  margin-bottom: 1.75rem;
+}
+
+.admin-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.35rem;
+}
+
+.admin-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+/* 2열 그리드: 통계 2+2, 패널, 허브 카드 열 정렬 */
+.admin-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.admin-stats-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.admin-stat-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 1.15rem 1.2rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.admin-stat-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6b7280;
+  margin-bottom: 0.35rem;
+}
+
+.admin-stat-value {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.25rem;
+}
+
+.admin-stat-trend {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #22c55e;
+}
+
+.admin-stat-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.admin-stat-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.admin-stat-icon--blue {
+  background: rgba(59, 130, 246, 0.12);
+  color: #2563eb;
+}
+
+.admin-stat-icon--green {
+  background: rgba(34, 197, 94, 0.12);
+  color: #16a34a;
+}
+
+.admin-stat-icon--purple {
+  background: rgba(139, 92, 246, 0.12);
+  color: #7c3aed;
+}
+
+.admin-stat-icon--orange {
+  background: rgba(249, 115, 22, 0.12);
+  color: #ea580c;
+}
+
+.admin-hub-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  align-self: stretch;
+  min-height: 0;
+}
+
+.admin-hub-card:hover {
+  border-color: #d8d8d8;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.admin-hub-card:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+a.admin-hub-card--link {
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+.admin-hub-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-hub-icon svg {
+  width: 2.65rem;
+  height: 2.65rem;
+}
+
+.admin-hub-icon--blue {
+  color: #2563eb;
+}
+
+.admin-hub-icon--green {
+  color: #16a34a;
+}
+
+.admin-hub-title {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5rem;
+  color: #1a1a1a;
+}
+
+.admin-hub-desc {
+  font-size: 0.82rem;
+  font-weight: 400;
+  color: #6b7280;
+  line-height: 1.55;
+  margin: 0;
+  max-width: 20rem;
+}
+
+.admin-panel {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 1.25rem 1.35rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  min-width: 0;
+}
+
+/* 빠른 작업 ↔ 최근 주문 동일 행 높이 (그리드 stretch) */
+.admin-panel--quick,
+.admin-panel--orders {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.admin-panel--quick .admin-panel-title,
+.admin-panel--orders .admin-orders-head {
+  flex-shrink: 0;
+}
+
+.admin-panel--quick .admin-quick-list {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-height: 0;
+}
+
+.admin-panel--orders .admin-order-list {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.admin-panel-title {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.admin-quick-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+  text-align: left;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, opacity 0.2s;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  color: #1a1a1a;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.admin-quick-btn svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+}
+
+.admin-quick-btn--primary {
+  background: #1a1a1a;
+  color: #fff;
+  border-color: #1a1a1a;
+}
+
+.admin-quick-btn--primary:hover {
+  background: #333;
+  border-color: #333;
+}
+
+.admin-quick-btn--ghost:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+}
+
+.admin-orders-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.admin-orders-head .admin-panel-title {
+  margin-bottom: 0;
+}
+
+.admin-view-all {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-decoration: none;
+}
+
+.admin-view-all:hover {
+  color: #1a1a1a;
+}
+
+.admin-orders-fetch-error {
+  margin: 0 0 0.75rem;
+  font-size: 0.82rem;
+  color: #b91c1c;
+}
+
+.admin-order-card--empty {
+  justify-content: center;
+}
+
+.admin-order-empty-text {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: center;
+  width: 100%;
+}
+
+.admin-order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.admin-order-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  background: #fafafa;
+}
+
+.admin-order-main {
+  min-width: 0;
+}
+
+.admin-order-id {
+  font-size: 0.82rem;
+  font-weight: 800;
+  margin-bottom: 0.2rem;
+}
+
+.admin-order-meta {
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+.admin-order-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.admin-order-price {
+  font-size: 0.9rem;
+  font-weight: 800;
+}
+
+.admin-status {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  text-transform: none;
+}
+
+.admin-status--processing {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.admin-status--shipping {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.admin-status--done {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.admin-status--cancelled {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.admin-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f6f8;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .admin-dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-topbar {
+    padding: 0 1rem;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 56px;
+    gap: 0.75rem;
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
+  }
+
+  .admin-stats-pair {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-main {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .admin-order-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-order-right {
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+}

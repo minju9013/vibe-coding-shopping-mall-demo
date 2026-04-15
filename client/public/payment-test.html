@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>포트원 결제 테스트</title>
+  <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: 40px auto; }
+    button { padding: 12px 20px; margin: 8px 4px; font-size: 15px; cursor: pointer; }
+    pre { background: #f4f4f4; padding: 16px; overflow-x: auto; white-space: pre-wrap; }
+    .info { background: #e8f5e9; padding: 12px; border-radius: 6px; margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+  <h1>포트원 결제 디버그 테스트</h1>
+  <div class="info" id="sdk-info">SDK 확인 중...</div>
+
+  <h3>아래 버튼을 하나씩 눌러보세요</h3>
+  <button onclick="test1()">1. channelKey 방식</button>
+  <button onclick="test2()">2. pg: html5_inicis</button>
+  <button onclick="test3()">3. pg: inicis_v2</button>
+  <button onclick="test4()">4. pg: inicis_v2.INIpayTest</button>
+
+  <h3>결과</h3>
+  <pre id="result">버튼을 눌러 테스트하세요</pre>
+
+  <script>
+    var resultEl = document.getElementById("result");
+    var infoEl = document.getElementById("sdk-info");
+
+    // SDK 상태 확인
+    if (window.IMP) {
+      infoEl.textContent = "SDK 로드 성공. IMP 객체 존재. init 호출합니다.";
+      window.IMP.init("imp33763272");
+      infoEl.textContent += " → IMP.init('imp33763272') 완료";
+    } else {
+      infoEl.textContent = "ERROR: window.IMP 없음 — SDK가 로드되지 않았습니다.";
+    }
+
+    function showResult(label, params, rsp) {
+      resultEl.textContent = "=== " + label + " ===\n\n"
+        + "[요청 파라미터]\n" + JSON.stringify(params, null, 2)
+        + "\n\n[응답 전체]\n" + JSON.stringify(rsp, null, 2);
+    }
+
+    function test1() {
+      var params = {
+        channelKey: "channel-key-716af4ac-5305-4de3-b955-26014512c003",
+        pay_method: "card",
+        merchant_uid: "test_" + Date.now(),
+        name: "테스트 상품",
+        amount: 100,
+        buyer_name: "테스트",
+        buyer_tel: "010-1234-5678",
+        buyer_addr: "서울특별시 강남구 삼성동",
+        buyer_postcode: "123-456"
+      };
+      resultEl.textContent = "channelKey 방식 요청 중...";
+      window.IMP.request_pay(params, function(rsp) { showResult("channelKey", params, rsp); });
+    }
+
+    function test2() {
+      var params = {
+        pg: "html5_inicis",
+        pay_method: "card",
+        merchant_uid: "test_" + Date.now(),
+        name: "테스트 상품",
+        amount: 100,
+        buyer_name: "테스트",
+        buyer_tel: "010-1234-5678",
+        buyer_addr: "서울특별시 강남구 삼성동",
+        buyer_postcode: "123-456"
+      };
+      resultEl.textContent = "pg: html5_inicis 방식 요청 중...";
+      window.IMP.request_pay(params, function(rsp) { showResult("pg: html5_inicis", params, rsp); });
+    }
+
+    function test3() {
+      var params = {
+        pg: "inicis_v2",
+        pay_method: "card",
+        merchant_uid: "test_" + Date.now(),
+        name: "테스트 상품",
+        amount: 100,
+        buyer_name: "테스트",
+        buyer_tel: "010-1234-5678",
+        buyer_addr: "서울특별시 강남구 삼성동",
+        buyer_postcode: "123-456"
+      };
+      resultEl.textContent = "pg: inicis_v2 방식 요청 중...";
+      window.IMP.request_pay(params, function(rsp) { showResult("pg: inicis_v2", params, rsp); });
+    }
+
+    function test4() {
+      var params = {
+        pg: "inicis_v2.INIpayTest",
+        pay_method: "card",
+        merchant_uid: "test_" + Date.now(),
+        name: "테스트 상품",
+        amount: 100,
+        buyer_name: "테스트",
+        buyer_tel: "010-1234-5678",
+        buyer_addr: "서울특별시 강남구 삼성동",
+        buyer_postcode: "123-456"
+      };
+      resultEl.textContent = "pg: inicis_v2.INIpayTest 방식 요청 중...";
+      window.IMP.request_pay(params, function(rsp) { showResult("pg: inicis_v2.INIpayTest", params, rsp); });
+    }
+  </script>
+</body>
+</html>

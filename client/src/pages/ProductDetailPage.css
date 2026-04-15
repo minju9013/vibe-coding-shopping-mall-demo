@@ -1,0 +1,614 @@
+/* Product detail — mock: forest green #3D691B, light borders #E5E5E5 */
+
+.pdp {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #000;
+}
+
+.pdp-main {
+  flex: 1;
+  max-width: 80rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 5.5rem 2.5rem 3rem;
+}
+
+.pdp-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.pdp-breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+.pdp-breadcrumb a:hover {
+  color: #3d691b;
+}
+
+.pdp-bc-sep {
+  color: #ccc;
+  user-select: none;
+}
+
+.pdp-bc-current {
+  color: #111;
+  font-weight: 600;
+}
+
+.pdp-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, 26.25rem);
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.pdp-gallery-main {
+  aspect-ratio: 1;
+  background: #f4f4f4;
+  border: 0.0625rem solid #e5e5e5;
+  overflow: hidden;
+}
+
+.pdp-gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pdp-gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.65rem;
+  margin-top: 0.65rem;
+}
+
+.pdp-gallery-thumb {
+  aspect-ratio: 1;
+  border: 0.125rem solid transparent;
+  padding: 0;
+  cursor: pointer;
+  background: #f4f4f4;
+  overflow: hidden;
+  transition: border-color 0.15s;
+}
+
+.pdp-gallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pdp-gallery-thumb:hover,
+.pdp-gallery-thumb:focus-visible {
+  border-color: #ccc;
+}
+
+.pdp-gallery-thumb--active {
+  border-color: #1a1a1a;
+}
+
+.pdp-info-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+  margin: 0 0 0.75rem;
+}
+
+.pdp-info-price {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+}
+
+.pdp-info-price del {
+  margin-left: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #9ca3af;
+}
+
+.pdp-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.pdp-stars {
+  display: flex;
+  gap: 0.15rem;
+}
+
+.pdp-star {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: #e5e5e5;
+}
+
+.pdp-star--fill {
+  color: #3d691b;
+}
+
+.pdp-rating-text {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+.pdp-desc-block {
+  margin: 0 0 1.75rem;
+}
+
+.pdp-desc-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pdp-desc-line {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #444;
+  padding-left: 1.1em;
+  position: relative;
+}
+
+.pdp-desc-line + .pdp-desc-line {
+  margin-top: 0.4rem;
+}
+
+.pdp-desc-line::before {
+  content: "- ";
+  position: absolute;
+  left: 0;
+  color: #444;
+}
+
+.pdp-desc-more {
+  display: inline-block;
+  margin-top: 0.65rem;
+  padding: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #3d691b;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.125rem;
+  font-family: inherit;
+}
+
+.pdp-desc-more:hover {
+  color: #2d5015;
+}
+
+.pdp-field {
+  margin-bottom: 1.75rem;
+}
+
+.pdp-field-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+}
+
+.pdp-field-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.pdp-field > .pdp-field-label {
+  margin-bottom: 0.75rem;
+}
+
+.pdp-size-guide {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #3d691b;
+  text-decoration: underline;
+  text-underline-offset: 0.125rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: inherit;
+}
+
+.pdp-size-guide:hover {
+  color: #2d5015;
+}
+
+/* 홈과 동일 형태(사각·테두리), PDP에서는 약 2rem 터치 타겟 */
+.pdp-color-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.pdp-color-swatch {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.1875rem;
+  border: 0.0625rem solid #e5e7eb;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font: inherit;
+  line-height: 0;
+  transition: border-color 0.15s;
+}
+
+.pdp-color-swatch:hover:not(:disabled),
+.pdp-color-swatch:focus-visible {
+  border-color: #9ca3af;
+}
+
+.pdp-color-swatch:focus-visible {
+  outline: 0.125rem solid #1a1a1a;
+  outline-offset: 0.125rem;
+}
+
+.pdp-color-swatch--light {
+  border-color: #d1d5db;
+}
+
+.pdp-color-swatch--split {
+  display: flex;
+  overflow: hidden;
+  padding: 0;
+  background: transparent !important;
+}
+
+.pdp-color-swatch-half {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+}
+
+.pdp-color-swatch--active {
+  border: 0.125rem solid #1a1a1a;
+}
+
+.pdp-sizes {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 0.35rem;
+  box-sizing: border-box;
+}
+
+.pdp-size-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0.55rem 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 0.125rem solid #e5e5e5;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+  transition: border-color 0.15s, opacity 0.15s;
+  font-family: inherit;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.pdp-size-btn:hover:not(:disabled),
+.pdp-size-btn:focus-visible:not(:disabled) {
+  border-color: #1a1a1a;
+}
+
+.pdp-size-btn--active {
+  border-color: #1a1a1a;
+}
+
+.pdp-size-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pdp-qty-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.pdp-qty-control {
+  display: flex;
+  align-items: stretch;
+  flex: 0 1 auto;
+  width: 100%;
+  max-width: 11.5rem;
+  height: 2.5rem;
+  min-height: 2.5rem;
+  border: 0.0625rem solid #e0e0e0;
+  border-radius: 0;
+  box-sizing: border-box;
+  background: #fff;
+  overflow: hidden;
+}
+
+.pdp-qty-btn {
+  width: 2.5rem;
+  flex-shrink: 0;
+  border: none;
+  background: #fff;
+  color: #111;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  font-family: inherit;
+}
+
+.pdp-qty-btn:hover:not(:disabled) {
+  background: #f5f5f5;
+}
+
+.pdp-qty-btn:focus-visible {
+  outline: 0.125rem solid #111;
+  outline-offset: -0.125rem;
+  z-index: 1;
+}
+
+.pdp-qty-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pdp-qty-value {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  border-left: 0.0625rem solid #e0e0e0;
+  border-right: 0.0625rem solid #e0e0e0;
+}
+
+.pdp-stock-hint {
+  flex: 1 1 auto;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #9ca3af;
+  line-height: 1.35;
+  text-align: right;
+  min-width: 8rem;
+}
+
+.pdp-cta-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.pdp-add-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #fff;
+  background: #111;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: inherit;
+}
+
+.pdp-add-cart-inner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.pdp-add-cart-icon {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+}
+
+.pdp-add-cart-label {
+  font-variant-numeric: tabular-nums;
+}
+
+.pdp-add-cart:hover {
+  background: #333;
+}
+
+.pdp-add-wishlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: #111;
+  background: #fff;
+  border: 0.0625rem solid #e0e0e0;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  font-family: inherit;
+}
+
+.pdp-wishlist-icon {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  display: block;
+  color: #9ca3af;
+}
+
+.pdp-add-wishlist:hover {
+  border-color: #ccc;
+  background: #fafafa;
+}
+
+.pdp-add-wishlist:hover .pdp-wishlist-icon {
+  color: #6b7280;
+}
+
+.pdp-accordions {
+  margin-top: 2rem;
+  border-top: 0.0625rem solid #e5e5e5;
+}
+
+.pdp-accordion-item {
+  border-bottom: 0.0625rem solid #e5e5e5;
+}
+
+.pdp-accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #111;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.pdp-accordion-trigger:hover {
+  color: #3d691b;
+}
+
+.pdp-accordion-chevron {
+  font-size: 0.65rem;
+  color: #888;
+}
+
+.pdp-accordion-panel {
+  padding: 0 0 1rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.pdp-reco {
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 0.0625rem solid #e5e5e5;
+}
+
+.pdp-reco-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 0 0 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.pdp-reco-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.pdp-reco-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.pdp-reco-card:focus-visible {
+  outline: 0.125rem solid #3d691b;
+  outline-offset: 0.1875rem;
+}
+
+.pdp-reco-img {
+  aspect-ratio: 1;
+  background: #f4f4f4;
+  border: 0.0625rem solid #e5e5e5;
+  margin-bottom: 0.65rem;
+  overflow: hidden;
+}
+
+.pdp-reco-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pdp-reco-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+  line-height: 1.35;
+}
+
+.pdp-reco-price {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.pdp-loading,
+.pdp-error {
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #666;
+}
+
+.pdp-error {
+  color: #b91c1c;
+}
+
+@media (max-width: 60rem) {
+  .pdp-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .pdp-reco-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 48rem) {
+  .pdp-main {
+    padding: 5rem 1.25rem 2rem;
+  }
+}

@@ -1,0 +1,170 @@
+.of-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f9fafb;
+  color: #111;
+}
+
+.of-main {
+  flex: 1;
+  max-width: 44rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 5.5rem 2rem 3rem;
+  box-sizing: border-box;
+}
+
+/* ===== Hero ===== */
+.of-hero {
+  text-align: center;
+  padding: 2.5rem 0 2rem;
+}
+
+.of-x-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: #fee2e2;
+  margin-bottom: 1.25rem;
+  animation: of-pop 0.4s ease-out;
+}
+
+@keyframes of-pop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.of-hero-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: #b91c1c;
+}
+
+.of-hero-sub {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  color: #374151;
+  font-weight: 500;
+}
+
+.of-hero-desc {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #6b7280;
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.of-hero-code {
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  font-family: monospace;
+}
+
+/* ===== Card ===== */
+.of-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.of-card-title {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.of-help-list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.of-help-list li {
+  font-size: 0.88rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+/* ===== Actions ===== */
+.of-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
+.of-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.of-btn--primary {
+  background: #111;
+  color: #fff;
+}
+
+.of-btn--primary:hover {
+  background: #333;
+}
+
+.of-btn--secondary {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.of-btn--secondary:hover {
+  background: #e5e7eb;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 36rem) {
+  .of-main {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .of-hero-title {
+    font-size: 1.25rem;
+  }
+
+  .of-actions {
+    flex-direction: column;
+  }
+
+  .of-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,231 @@
+.cart-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: rgba(0, 0, 0, 0.45);
+  box-sizing: border-box;
+}
+
+.cart-modal {
+  width: 100%;
+  max-width: 26rem;
+  max-height: min(90vh, 36rem);
+  overflow: auto;
+  background: #fff;
+  color: #111;
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.cart-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 0.0625rem solid #e5e5e5;
+}
+
+.cart-modal-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.cart-modal-close {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #666;
+  padding: 0.15rem;
+}
+
+.cart-modal-close:hover {
+  color: #111;
+}
+
+.cart-modal-body {
+  padding: 1.25rem;
+}
+
+.cart-modal-product {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.cart-modal-thumb {
+  width: 4rem;
+  height: 4rem;
+  flex-shrink: 0;
+  background: #f4f4f4;
+  object-fit: cover;
+}
+
+.cart-modal-product-name {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.cart-modal-field {
+  margin-bottom: 1rem;
+}
+
+.cart-modal-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.cart-modal-sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.cart-modal-size-btn {
+  min-width: 2.5rem;
+  padding: 0.45rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 0.125rem solid #e5e5e5;
+  background: #fff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.cart-modal-size-btn:hover,
+.cart-modal-size-btn:focus-visible {
+  border-color: #1a1a1a;
+}
+
+.cart-modal-size-btn--active {
+  border-color: #1a1a1a;
+}
+
+.cart-modal-color-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 2.5rem;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 0.125rem solid #e5e5e5;
+  background: #fff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.cart-modal-color-btn:hover,
+.cart-modal-color-btn:focus-visible {
+  border-color: #1a1a1a;
+}
+
+.cart-modal-color-btn--active {
+  border-color: #1a1a1a;
+}
+
+.cart-modal-color-dot {
+  display: inline-block;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 0.125rem;
+  flex-shrink: 0;
+  border: 0.0625rem solid transparent;
+}
+
+.cart-modal-color-dot--light {
+  border-color: #d1d5db;
+}
+
+.cart-modal-text-input {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  font-size: 0.85rem;
+  border: 0.0625rem solid #e0e0e0;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.cart-modal-qty {
+  display: flex;
+  align-items: stretch;
+  max-width: 11.5rem;
+  height: 2.5rem;
+  border: 0.0625rem solid #e0e0e0;
+  box-sizing: border-box;
+}
+
+.cart-modal-qty button {
+  width: 2.5rem;
+  flex-shrink: 0;
+  border: none;
+  background: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.cart-modal-qty button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.cart-modal-qty span {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-left: 0.0625rem solid #e0e0e0;
+  border-right: 0.0625rem solid #e0e0e0;
+}
+
+.cart-modal-footer {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  padding: 1rem 1.25rem;
+  border-top: 0.0625rem solid #e5e5e5;
+}
+
+.cart-modal-btn {
+  padding: 0.55rem 1rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+}
+
+.cart-modal-btn--ghost {
+  background: #fff;
+  border: 0.0625rem solid #e0e0e0;
+  color: #111;
+}
+
+.cart-modal-btn--primary {
+  background: #111;
+  color: #fff;
+}
+
+.cart-modal-btn--primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.cart-modal-error {
+  margin: 0 0 0.75rem;
+  font-size: 0.82rem;
+  color: #b91c1c;
+}
