@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Shopping Mall Demo - Backend API Server",
   "main": "server.js",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
+    "predev": "node scripts/free-dev-port.js",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
