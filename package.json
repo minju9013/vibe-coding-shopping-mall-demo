@@ -1,0 +1,10 @@
+{
+  "name": "shopping-mall-demo-root",
+  "private": true,
+  "scripts": {
+    "heroku-postbuild": "cd server && npm install --omit=dev"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}
